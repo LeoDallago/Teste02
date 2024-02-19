@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+</head>
+
+<body>
+    <form action="/Editar/<%= equipamento._id %>" method="post">
+        <label>Nome:</label>
+        <input type="text" name="nome" value="<%= equipamento.nome %>">
+
+        <label>Preco:</label>
+        <input type="text" name="preco" value="<%= equipamento.preco %>">
+
+        <label>Numero de serie:</label>
+        <input type="text" name="serial" value="<%= equipamento.serial %>">
+
+        <label>Data de fabricacao:</label>
+        <input type="date" name="fabricacao" value="<%= equipamento.fabricacao %>">
+
+        <label>Fabricante:</label>
+        <input type="text" name="fabricante" value="<%= equipamento.fabricante %>">
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

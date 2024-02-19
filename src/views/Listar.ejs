@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem</title>
+</head>
+
+<body>
+    <ul>
+        <% equipamento.forEach((equipamentos)=> { %>
+
+            <li>
+                <%= equipamentos.nome %> -<%= equipamentos.serial %> - <%= equipamentos.fabricante %>
+                            <button>
+                                <a href="/Editar?id=<%= equipamentos._id %>">Editar</a>
+                            </button>
+            </li>
+
+            <% }); %>
+    </ul>
+</body>
+
+</html>
