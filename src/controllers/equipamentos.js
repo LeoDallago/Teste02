@@ -70,10 +70,19 @@ async function edit(req, res) {
     })
 }
 
+async function remove(req, res) {
+    const { id } = req.params
+
+    const equipamento = await equipamentoModel.deleteOne({ _id: id })
+
+    res.redirect('/Listar')
+}
+
 module.exports = {
     post,
     index,
     get,
     pageEdit,
     edit,
+    remove,
 }
