@@ -4,28 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
 </head>
 
 <body>
-    <form action="/Cadastro/add" method="post">
-        <label>Nome:</label>
-        <input type="text" name="nome">
+    <header class="header">
+        <a href="#">Cadastrar</a>
+        <a href="Listar">Listar</a>
+    </header>
+    <div class="content">
+        <form action="/Cadastro" method="post">
+            <label class="label">Nome:</label>
+            <input type="text" name="nome" class="input">
 
-        <label>Preco:</label>
-        <input type="text" name="preco">
+            <label class="label">Preco:</label>
+            <input type="text" name="preco" class="input">
 
-        <label>Numero de serie:</label>
-        <input type="text" name="serial">
+            <label class="label">Numero de serie:</label>
+            <input type="text" name="serial" class="input">
 
-        <label>Data de fabricacao:</label>
-        <input type="date" name="fabricacao">
+            <label class="label">Data de fabricacao:</label>
+            <input type="date" name="fabricacao" class="input">
 
-        <label>Fabricante:</label>
-        <input type="text" name="fabricante">
+            <label class="label">Fabricante:</label>
+            <input type="text" name="fabricante" class="input">
 
-        <button type="submit">Enviar</button>
-    </form>
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </div>
+
+    <% if (typeof message !=='undefined' ) { %>
+        <h4>
+            <%= message %>
+        </h4>
+        <% } %>
 </body>
 
 </html>

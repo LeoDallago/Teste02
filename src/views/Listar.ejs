@@ -4,19 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Listagem</title>
 </head>
 
 <body>
+    <header class="header">
+        <a href="cadastro">Cadastrar</a>
+        <a href="#">Listar</a>
+    </header>
     <ul>
         <% equipamento.forEach((equipamentos)=> { %>
 
-            <li>
-                <%= equipamentos.nome %> -<%= equipamentos.serial %> - <%= equipamentos.fabricante %>
-                            <button>
+            <li class="list_content">
+                Nome: <%= equipamentos.nome %> <br>
+                    Nº de serie: <%= equipamentos.serial %> <br>
+                        Fabricante: <%= equipamentos.fabricante %>
+                            <br>
+                            <button class="button">
                                 <a href="/Editar?id=<%= equipamentos._id %>">Editar</a>
                             </button>
-                            <button>
+                            <br>
+                            <button class="button">
                                 <a href="/Remover/<%= equipamentos._id %>">Remover</a>
                             </button>
             </li>

@@ -4,28 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Editar</title>
 </head>
 
 <body>
-    <form action="/Editar/<%= equipamento._id %>" method="post">
-        <label>Nome:</label>
-        <input type="text" name="nome" value="<%= equipamento.nome %>">
+    <header class="header">
+        <a href="cadastro">Cadastrar</a>
+        <a href="Listar">Listar</a>
+    </header>
 
-        <label>Preco:</label>
-        <input type="text" name="preco" value="<%= equipamento.preco %>">
+    <div class="content">
+        <form action="/Editar/<%= equipamento._id %>" method="post">
+            <label class="label">Nome:</label>
+            <input type="text" name="nome" class="input" value="<%= equipamento.nome %>">
 
-        <label>Numero de serie:</label>
-        <input type="text" name="serial" value="<%= equipamento.serial %>">
+            <label class="label">Preco:</label>
+            <input type="text" name="preco" class="input" value="<%= equipamento.preco %>">
 
-        <label>Data de fabricacao:</label>
-        <input type="date" name="fabricacao" value="<%= equipamento.fabricacao %>">
+            <label class="label">Numero de serie:</label>
+            <input type="text" name="serial" class="input" value="<%= equipamento.serial %>">
 
-        <label>Fabricante:</label>
-        <input type="text" name="fabricante" value="<%= equipamento.fabricante %>">
+            <label class="label">Data de fabricacao:</label>
+            <input type="date" name="fabricacao" class="input" value="<%= equipamento.fabricacao %>">
 
-        <button type="submit">Enviar</button>
-    </form>
+            <label class="label">Fabricante:</label>
+            <input type="text" name="fabricante" class="input" value="<%= equipamento.fabricante %>">
+
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </div>
 </body>
 
 </html>

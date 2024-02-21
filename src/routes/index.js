@@ -4,7 +4,7 @@ const { Router } = require('express')
 const EquipamentoController = require('../controllers/equipamentos')
 
 router.get('/Cadastro', EquipamentoController.index)
-router.post('/Cadastro/add', EquipamentoController.post)
+router.post('/Cadastro', EquipamentoController.post)
 
 router.get('/Listar', EquipamentoController.get)
 

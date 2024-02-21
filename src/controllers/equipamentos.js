@@ -23,7 +23,9 @@ async function post(req, res) {
 
     equipamento.save()
 
-    res.render('Cadastrar')
+    res.render('Cadastrar', {
+        message: 'Cadastro realizado com sucesso!',
+    })
 }
 
 async function get(req, res) {
@@ -65,9 +67,7 @@ async function edit(req, res) {
 
     equipamento.save()
 
-    res.render('Editar', {
-        equipamento,
-    })
+    res.redirect('/Listar')
 }
 
 async function remove(req, res) {
