@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chamado</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/">Inicio</a>
+        <a href="#">Cadastrar chamado</a>
+        <a href="ListarChamado">Listar chamados</a>
+    </header>
+
+    <h4>Cadastrar chamado</h4>
+
+    <div class="content">
+        <form action="/Chamado" method="post">
+            <label class="label">Titulo</label>
+            <input class="input" type="text" name="titulo">
+
+            <label class="label">Descricao</label>
+            <textarea name="descricao" class="input" rows="10"></textarea>
+
+            <label class="label">Equipamento</label>
+            <input class="input" type="text" name="equipamento">
+
+            <label class="label">Data</label>
+            <input class="input" type="date" name="data_abertura">
+
+            <button class="button" type="submit">Registrar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

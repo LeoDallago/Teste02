@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Editar chamado</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/">Inicio</a>
+        <a href="Chamado">Cadastrar chamado</a>
+        <a href="ListarChamado">Listar chamados</a>
+    </header>
+
+    <h4>Editar chamado</h4>
+
+    <div class="content">
+        <form action="/EditarChamado/<%= chamado._id %>" method="post">
+            <label class="label">Titulo:</label>
+            <input type="text" name="titulo" class="input" value="<%= chamado.titulo %>">
+
+            <label class="label">Descricao:</label>
+            <input type="text" name="descricao" class="input" value="<%= chamado.descricao %>">
+
+            <label class="label">Equipamento</label>
+            <input type="text" name="equipamento" class="input" value="<%= chamado.equipamento %>">
+
+            <label class="label">Data :</label>
+            <input type="date" name="data_abertura" class="input" value="<%= chamado.data_abertura %>">
+
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

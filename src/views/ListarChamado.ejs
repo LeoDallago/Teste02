@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Listar chamado</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/">Inicio</a>
+        <a href="Chamado">Cadastrar chamado</a>
+        <a href="#">Listar chamados</a>
+    </header>
+
+    <h4>Lista de chamados</h4>
+
+    <ul>
+        <% chamado.forEach((chamados)=> { %>
+            <li class="list_content">
+                Titulo: <%= chamados.titulo %>
+                    <br>
+                    Equipamento: <%= chamados.equipamento %>
+                        <br>
+                        Aberto deste: <%= chamados.data_abertura %>
+                            <br>
+                            <button>
+                                <a href="/EditarChamado?id=<%= chamados._id %>">Editar</a>
+                            </button>
+                            <br>
+                            <button class="button">
+                                <a href="/RemoverChamado/<%= chamados._id %>">Remover</a>
+                            </button>
+
+            </li>
+            <% }); %>
+    </ul>
+</body>
+
+</html>
