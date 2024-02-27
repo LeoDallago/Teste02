@@ -21,7 +21,10 @@ function post(req, res) {
 
     chamado.save()
 
-    res.redirect('/Chamado')
+
+    res.render('Chamado', {
+        message: 'Cadastro realizado com sucesso!',
+    })
 }
 
 async function get(req, res) {

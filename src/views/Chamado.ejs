@@ -34,7 +34,13 @@
             <button class="button" type="submit">Registrar</button>
         </form>
     </div>
+    <% if (typeof message !=='undefined' ) { %>
+        <h4>
+            <%= message %>
+        </h4>
+        <% } %>
 
+            <footer>Desenvolvido por Leonardo Dallago de Cordova</footer>
 </body>
 
 </html>
